@@ -1,0 +1,33 @@
+footer{
+    background-color: #353535;
+    color: white;
+    height: 100%;
+    & h1{
+        padding: 20px 0px 0px 35px;
+        font-size: 25px;
+        font-weight: 200;
+    }
+}
+
+a{
+    text-decoration: none;
+}
+a:visited{
+    color: white;
+}
+
+ul{
+    margin: 0% 0% 0% 0%;
+}
+
+li{
+    line-height: 0px;
+    display: flex;
+    align-items:center;
+    & a{
+        text-decoration: none;
+        }
+    & i{
+        padding-right:10px; 
+    }
+}

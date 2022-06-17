@@ -1,0 +1,49 @@
+@mixin btn {
+margin: 20px 0px 50px 0px;
+font-size: 1rem;
+border-radius: 50px;
+background: linear-gradient(344deg, rgba(147,86,220,1) 1%, rgba(255,121,218,1) 69%);
+color: white;
+font-weight: 700;
+padding: 0px 20px 0px 20px;
+}
+
+@mixin etape{
+
+   
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+        &__index{
+            position:absolute;
+            padding: 5px 10px 5px 10px;
+            margin-left: 10px;
+            border-radius: 20px;
+            background: $colour-primary;
+            color: white;
+            z-index: 2;
+        }
+        &__texte{
+
+            font-weight: 600;
+            width: 100%;
+            margin: 20px;
+            padding:0px 35px 0px 35px;
+            display: flex;
+            align-items: center;
+            border-radius: 15px;
+            box-shadow: 0 3px 8px 0 rgba(0,0,0,0.3);
+            &.--isactive{
+                background-color: #f5edff;     
+            }
+            & p{
+                padding-left: 10px;
+            }
+            & .fa-solid {
+                color: grey;
+                &--isactive{
+                    color: $colour-primary;
+                }
+            }
+            }    
+}
