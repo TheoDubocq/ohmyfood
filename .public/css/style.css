@@ -199,4 +199,54 @@ li i {
   padding-right: 10px;
 }
 
+.img__container {
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+
+.imgbackground {
+  width: 100%;
+  object-fit: cover;
+}
+
+.menu {
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  background: white;
+  margin-top: 200px;
+  padding-top: 25px;
+  border-radius: 20px 20px 0px 0px;
+}
+.menu__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px 0px 10px;
+}
+.menu__card {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.3);
+}
+.menu__card h3 {
+  padding: 5px 5px 2px 5px;
+  margin: 0;
+  font-size: 20px;
+}
+.menu__card__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu__card__description p {
+  font-size: 15px;
+  padding: 5px;
+  margin: 0%;
+}
+
 /*# sourceMappingURL=style.css.map */

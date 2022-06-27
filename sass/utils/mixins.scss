@@ -47,3 +47,14 @@ padding: 0px 20px 0px 20px;
             }
             }    
 }
+
+@mixin imagecontainer{
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+
+@mixin image {
+    width: 100%;
+    object-fit: cover;
+}
