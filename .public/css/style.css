@@ -141,6 +141,25 @@ h2 {
   border-radius: 5px;
 }
 
+@keyframes spinner {
+  from {
+    z-index: 999;
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(1200deg);
+    z-index: -10;
+  }
+}
+.spinner {
+  position: relative;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  color: #9356DC;
+  animation: spinner 2s;
+}
+
 header {
   position: relative;
   width: 100%;
@@ -219,6 +238,19 @@ li i {
   padding-top: 25px;
   border-radius: 20px 20px 0px 0px;
 }
+.menu h4 {
+  margin: 40px 0px 15px 20px;
+  font-weight: 200;
+}
+.menu h4::before {
+  content: "";
+  height: 2px;
+  width: 50px;
+  position: absolute;
+  border-bottom: 3px solid #99E2D0;
+  margin-top: 20px;
+  padding-top: 5px;
+}
 .menu__title {
   display: flex;
   align-items: center;
@@ -226,27 +258,109 @@ li i {
   padding: 0px 10px 0px 10px;
 }
 .menu__card {
+  opacity: 0;
   display: flex;
   align-items: center;
   margin: 20px;
   background: white;
   border-radius: 20px;
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+.menu__card__check {
+  margin-right: -100px;
+  padding: 25px;
+  color: white;
+  background-color: #99E2D0;
 }
 .menu__card h3 {
   padding: 5px 5px 2px 5px;
   margin: 0;
   font-size: 20px;
 }
-.menu__card__description {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.menu__card span {
+  font-weight: 700;
+  font-size: 15px;
+  padding-top: 30px;
 }
-.menu__card__description p {
+.menu__card p {
   font-size: 15px;
   padding: 5px;
   margin: 0%;
+}
+.menu__card__description {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  justify-content: space-between;
+  width: 100%;
+}
+.menu__card__description__text {
+  width: 80%;
+}
+.menu__card__description__text p, .menu__card__description__text h3 {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.btn__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn__container .btn {
+  padding: 0px 50px 0px 50px;
+}
+
+.menu__card:hover .menu__card__check {
+  transition: 0.3s;
+  margin: 0;
+}
+
+.menu__card:hover .menu__card__check > i {
+  transition: 0.5s;
+  transform: rotate(360deg);
+}
+
+@keyframes apparition {
+  from {
+    transform: translateY(100px);
+    opacity: 0%;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 100%;
+  }
+}
+.menu__card:nth-child(1) {
+  animation-name: apparition;
+  animation-delay: 0ms;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.menu__card:nth-child(2) {
+  animation-name: apparition;
+  animation-delay: 200ms;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.menu__card:nth-child(3) {
+  animation-name: apparition;
+  animation-delay: 400ms;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.menu__card:nth-child(4) {
+  animation-name: apparition;
+  animation-delay: 600ms;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
 /*# sourceMappingURL=style.css.map */

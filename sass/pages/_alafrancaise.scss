@@ -15,6 +15,19 @@
     margin-top: 200px;
     padding-top: 25px;
     border-radius:  20px 20px 0px 0px;
+    & h4{
+        margin: 40px 0px 15px 20px;
+        font-weight: 200;
+    }
+    & h4::before{
+        content:'';
+        height: 2px;
+        width: 50px;
+        position: absolute;
+        border-bottom: 3px solid $colour-tertiary;
+        margin-top: 20px;
+        padding-top: 5px;
+    }
     &__title{
         display: flex;
         align-items: center;
@@ -22,27 +35,106 @@
         padding: 0px 10px 0px 10px;
     }
     &__card{
+        opacity: 0;
         display: flex;
         align-items: center;
         margin: 20px;
         background: white;
         border-radius: 20px;
         box-shadow: 0 3px 8px 0 rgba(0,0,0,0.3);
+        overflow: hidden;
+
+        
+        &__check{
+            margin-right: -100px;                
+            padding: 25px;
+            color: white;
+            background-color: $colour-tertiary;}
+
         & h3{
+        
             padding: 5px 5px 2px 5px;
             margin: 0;
             font-size: 20px;
         }
-        &__description{
-        display: flex;
-        justify-content: space-between;
-        align-items: center ;
+        & span{
+            font-weight: 700;
+            font-size: 15px;
+            padding-top: 30px;
+        }
         & p{
             font-size: 15px;
             padding: 5px;
             margin: 0%;
         }
+        &__description{
+            min-width: 0;
+            display: flex;
+            align-items: center ;
+            padding: 5px;
+            justify-content: space-between;
+            width: 100%;
+            &__text{
+                width: 80%;
+                & p,h3{
+                width: 100%;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                }
+
+            }
         }
+       
     }
 
+}
+
+.btn__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & .btn{
+        padding: 0px 50px 0px 50px;
+    }
+}
+
+
+.menu__card:hover .menu__card__check{
+    transition: 0.3s;
+    margin:0; 
+  
+}
+.menu__card:hover .menu__card__check>i{
+    transition: 0.5s;
+    transform: rotate(360deg);
+}
+
+
+
+
+@keyframes apparition{
+           
+    from{
+        transform: translateY(100px);
+        opacity: 0%;
+        
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 100%;
+        
+    }
+    }
+
+@for $i from 1 through 4 {
+    .menu__card:nth-child(#{$i}){
+        
+        animation-name: apparition;
+        animation-delay: $timing+ms;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+
+    }
+    $timing:$timing+200;
 }
