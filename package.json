@@ -1,7 +1,7 @@
 {
-  "name": "ohmyfood",
+  "name": "menudraft",
   "version": "1.0.0",
-  "description": "site ohmyfood",
+  "description": "test de menu burger",
   "main": "index.js",
   "scripts": {
     "sass":"sass --watch ./sass/main.scss:.public/css/style.css"

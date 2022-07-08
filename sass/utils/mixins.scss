@@ -13,18 +13,22 @@ padding: 0px 20px 0px 20px;
    
         display: flex;
         align-items: center;
+
         margin-left: 10px;
         &__index{
             position:absolute;
             padding: 5px 10px 5px 10px;
             margin-left: 10px;
+
             border-radius: 20px;
             background: $colour-primary;
             color: white;
             z-index: 2;
         }
         &__texte{
-
+            @media screen and (min-width:768px){
+                margin-right: 4rem;
+            }
             font-weight: 600;
             width: 100%;
             margin: 20px;
@@ -33,17 +37,11 @@ padding: 0px 20px 0px 20px;
             align-items: center;
             border-radius: 15px;
             box-shadow: 0 3px 8px 0 rgba(0,0,0,0.3);
-            &.--isactive{
-                background-color: #f5edff;     
-            }
             & p{
                 padding-left: 10px;
             }
             & .fa-solid {
                 color: grey;
-                &--isactive{
-                    color: $colour-primary;
-                }
             }
             }    
 }
@@ -57,4 +55,4 @@ padding: 0px 20px 0px 20px;
 @mixin image {
     width: 100%;
     object-fit: cover;
-}
+    }

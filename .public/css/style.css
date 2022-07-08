@@ -13,6 +13,14 @@ html, body {
   text-align: center;
 }
 
+.fa-stack.small {
+  font-size: 0.5em;
+}
+
+i {
+  vertical-align: middle;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
@@ -35,6 +43,24 @@ h2 {
   font-size: 1.7rem;
   margin-left: 20px;
   margin-bottom: 0%;
+}
+
+.spinner {
+  position: fixed;
+  z-index: -10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  color: #9356DC;
+  animation: disparition 0.2s forwards;
+}
+.spinner img {
+  width: 5rem;
+  height: 5rem;
+  animation: spinner 2s;
 }
 
 .locations__ville {
@@ -62,6 +88,7 @@ h2 {
 
 .fonctionnement {
   display: flex;
+  background-color: white;
   flex-direction: column;
 }
 .fonctionnement__etape {
@@ -88,8 +115,10 @@ h2 {
   border-radius: 15px;
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.3);
 }
-.fonctionnement__etape__texte.--isactive {
-  background-color: #f5edff;
+@media screen and (min-width: 768px) {
+  .fonctionnement__etape__texte {
+    margin-right: 4rem;
+  }
 }
 .fonctionnement__etape__texte p {
   padding-left: 10px;
@@ -97,13 +126,13 @@ h2 {
 .fonctionnement__etape__texte .fa-solid {
   color: grey;
 }
-.fonctionnement__etape__texte .fa-solid--isactive {
-  color: #9356DC;
-}
 
 .restaurant {
   background: #f6f6f6;
   padding: 20px 0px 20px 0px;
+}
+.restaurant a:visited {
+  color: black;
 }
 .restaurant__card {
   margin: 20px;
@@ -128,7 +157,11 @@ h2 {
   align-items: center;
   justify-content: space-between;
 }
-.restaurant__card__layout .fa-light {
+.restaurant__card__layout .fa-regular {
+  padding-right: 15px;
+}
+.restaurant__card__layout .fa-solid {
+  color: white;
   padding-right: 15px;
 }
 .restaurant__card__new p {
@@ -141,26 +174,69 @@ h2 {
   border-radius: 5px;
 }
 
+.fonctionnement__etape__texte:hover {
+  background-color: #f5edff;
+}
+
+.fonctionnement__etape__texte:hover > i {
+  color: #9356DC;
+}
+
+.fa-stack:hover > .fa-solid {
+  animation: coloration 1s forwards;
+}
+
 @keyframes spinner {
   from {
-    z-index: 999;
     transform: rotate(0deg);
   }
   to {
     transform: rotate(1200deg);
-    z-index: -10;
+    display: none;
   }
 }
-.spinner {
-  position: relative;
-  z-index: 99;
-  width: 100%;
-  height: 100%;
-  color: #9356DC;
-  animation: spinner 2s;
+@keyframes disparition {
+  0% {
+    z-index: 10;
+  }
+  99% {
+    z-index: 10;
+  }
 }
-
+@keyframes coloration {
+  from {
+    color: white;
+  }
+  to {
+    color: #9356DC;
+  }
+}
+@media screen and (min-width: 768px) {
+  .locations__ville {
+    padding-right: 0%;
+  }
+  .restaurant {
+    background: #f6f6f6;
+  }
+  .restaurant__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .restaurant__card {
+    width: 40%;
+  }
+  .restaurant__card__new p {
+    margin-left: 27%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .restaurant__card__new p {
+    margin-left: 30%;
+  }
+}
 header {
+  background-color: white;
   position: relative;
   width: 100%;
   padding: 20px 0px 15px 0px;
@@ -171,6 +247,13 @@ header {
 }
 header .header_logo {
   width: 200px;
+}
+header a {
+  position: absolute;
+  margin-left: -95%;
+}
+header a .fa-heart {
+  color: black;
 }
 
 .btn {
@@ -194,27 +277,32 @@ footer h1 {
   font-weight: 200;
 }
 
+footer h1 {
+  margin-top: 0;
+}
+
 a {
   text-decoration: none;
 }
 
-a:visited {
+footer a:visited {
   color: white;
 }
 
 ul {
   margin: 0% 0% 0% 0%;
+  list-style-type: none;
 }
 
-li {
+li > a {
   line-height: 0px;
   display: flex;
   align-items: center;
 }
-li a {
+li > a a {
   text-decoration: none;
 }
-li i {
+li > a i {
   padding-right: 10px;
 }
 
@@ -224,9 +312,28 @@ li i {
   overflow: hidden;
 }
 
-.imgbackground {
+.maincontainer {
+  display: flex;
+  justify-content: center;
+}
+
+.img__container {
   width: 100%;
   object-fit: cover;
+  top: 0;
+  position: fixed;
+  z-index: -100;
+  background: url("/assets/restaurants/francaise.jpg");
+  width: 100vw;
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.white {
+  color: white;
 }
 
 .menu {
@@ -361,6 +468,16 @@ li i {
   animation-delay: 600ms;
   animation-duration: 1s;
   animation-fill-mode: forwards;
+}
+
+@media screen and (min-width: 982px) {
+  .img__container {
+    height: 150%;
+  }
+  .menu {
+    width: 80%;
+    margin-bottom: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

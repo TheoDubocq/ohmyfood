@@ -18,11 +18,11 @@
 
 <body>
     <div class="spinner">
-        <i class="fa-solid fa-loader"></i>
-    </div>   
+        <img src="./assets/logo/spinner.png" alt="spinner">
+    </div>
     <!--header-->
     <header>
-        <img src="./assets/logo/ohmyfood.png" alt="Logo site" class="header_logo"/>
+        <img src="./assets/logo/ohmyfood.png" alt="Logo site" class="header_logo" />
     </header>
     <section class="locations">
         <div class="locations__ville">
@@ -57,67 +57,97 @@
         </div>
         <div class="fonctionnement__etape">
             <p class="fonctionnement__etape__index">3</p>
-            <div class="fonctionnement__etape__texte --isactive">
-                <i class="fa-solid fa-solid--isactive fa-store "></i>
+            <div class="fonctionnement__etape__texte">
+                <i class="fa-solid fa-store "></i>
                 <p>Dégustez au restaurant</p>
             </div>
         </div>
     </section>
     <section class="restaurant">
         <h2>Restaurants</h2>
-        <div class="restaurant__card">
-            <div class="restaurant__card__new"><p>Nouveau</p></div>
-            <img src="assets/restaurants/palette.jpg" alt="Apercu restaurant" />
-            <div class="restaurant__card__layout">
-                <div>
-                    <h3>La pallette du goût</h3>
-                    <p>Ménilmontant</p>
+        <div class="restaurant__container">
+            <a class="restaurant__card" href="/alafrancaise.html">
+                <div class="restaurant__card__new">
+                    <p>Nouveau</p>
                 </div>
-                <i class="fa-light fa-heart"></i>
-            </div>
-        </div>
-        <div class="restaurant__card">
-            <div class="restaurant__card__new"><p>Nouveau</p></div>
-            <img src="assets/restaurants/note.jpg" alt="Apercu restaurant" />
-            <div class="restaurant__card__layout">
-                <div>
-                    <h3>La note enchantée</h3>
-                    <p>Charonne</p>
+                <img src="assets/restaurants/palette.jpg" alt="Apercu restaurant" />
+                <div class="restaurant__card__layout">
+                    <div>
+                        <h3>La pallette du goût</h3>
+                        <p>Ménilmontant</p>
+                    </div>
+                    <div class="fa-stack">
+                        <i class="fa-solid fa-heart fa-stack-1x"></i>
+                        <i class="fa-regular fa-heart fa-stack-1x"></i>
+
+                    </div>
                 </div>
-            <i class="fa-light fa-heart"></i>
-            </div>
-        </div>
-        <div class="restaurant__card">
-            <img src="assets/restaurants/francaise.jpg" alt="Apercu restaurant" />
-            <div class="restaurant__card__layout">
-                <div>
-                    <h3>À la française</h3>
-                    <p>Cité Rouge</p>
+            </a>
+            <a class="restaurant__card" href="/alafrancaise.html">
+                <div class="restaurant__card__new">
+                    <p>Nouveau</p>
                 </div>
-                <i class="fa-light fa-heart"></i>
-            </div>
-        </div>
-        <div class="restaurant__card">
-            <img src="assets/restaurants/delice.jpg" alt="Apercu restaurant" />
-            <div class="restaurant__card__layout">
-                <div >
-                    <h3>Le délice des sens</h3>
-                    <p>Folie-Méricourt</p>
+                <img src="assets/restaurants/note.jpg" alt="Apercu restaurant" />
+                <div class="restaurant__card__layout">
+                    <div>
+                        <h3>La note enchantée</h3>
+                        <p>Charonne</p>
+                    </div>
+                    <div class="fa-stack">
+                        <i class="fa-solid fa-heart fa-stack-1x"></i>
+                        <i class="fa-regular fa-heart fa-stack-1x"></i>
+
+                    </div>
                 </div>
-            <i class="fa-light fa-heart"></i>
-            </div>
+            </a>
+            <a class="restaurant__card" href="/alafrancaise.html">
+                <img src="assets/restaurants/francaise.jpg" alt="Apercu restaurant" />
+                <div class="restaurant__card__layout">
+                    <div>
+                        <h3>À la française</h3>
+                        <p>Cité Rouge</p>
+                    </div>
+                    <div class="fa-stack">
+                        <i class="fa-solid fa-heart fa-stack-1x"></i>
+                        <i class="fa-regular fa-heart fa-stack-1x"></i>
+
+                    </div>
+                </div>
+            </a>
+            <a class="restaurant__card" href="/alafrancaise.html">
+                <img src="assets/restaurants/delice.jpg" alt="Apercu restaurant" />
+                <div class="restaurant__card__layout">
+                    <div>
+                        <h3>Le délice des sens</h3>
+                        <p>Folie-Méricourt</p>
+                    </div>
+                    <div class="fa-stack">
+                        <i class="fa-solid fa-heart fa-stack-1x"></i>
+                        <i class="fa-regular fa-heart fa-stack-1x"></i>
+
+                    </div>
+                </div>
+            </a>
         </div>
     </section>
-    
+
 
     <!--FOOTER-->
     <footer>
         <h1>ohmyfood</h1>
         <ul>
-            <a href="#"><li><i class="fa-solid fa-utensils"></i><p>Proposer un restaurant</p></li></a>
-            <a href="#"><li><i class="fa-solid fa-handshake-angle"></i><p>Devenir partenaire</p></li></a>
-            <a href="#"><li><p>Mention légales</p></li></a>
-            <a href="#"><li><p>Contact</p></li></a>
+            <li><a href="#"><i class="fa-solid fa-utensils"></i>
+                    <p>Proposer un restaurant</p>
+                </a></li>
+            <li><a href="#"><i class="fa-solid fa-handshake-angle"></i>
+                    <p>Devenir partenaire</p>
+                </a></li>
+            <li> <a href="#">
+                    <p>Mention légales</p>
+                </a></li>
+            <li> <a href="#">
+                    <p>Contact</p>
+                </a></li>
         </ul>
 
     </footer>
