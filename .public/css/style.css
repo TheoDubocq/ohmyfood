@@ -55,7 +55,7 @@ h2 {
   width: 100vw;
   height: 100vh;
   color: #9356DC;
-  animation: disparition 0.2s forwards;
+  animation: disparition 2s forwards;
 }
 .spinner img {
   width: 5rem;
@@ -491,6 +491,15 @@ li > a i {
   .menu {
     width: 80%;
     margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 760px) {
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+  .menu__card {
+    width: 30%;
   }
 }
 
