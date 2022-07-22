@@ -91,6 +91,10 @@ h2 {
   background-color: white;
   flex-direction: column;
 }
+.fonctionnement__container {
+  display: flex;
+  flex-direction: column;
+}
 .fonctionnement__etape {
   display: flex;
   align-items: center;
@@ -130,6 +134,10 @@ h2 {
 .restaurant {
   background: #f6f6f6;
   padding: 20px 0px 20px 0px;
+}
+.restaurant__container {
+  display: flex;
+  flex-direction: column;
 }
 .restaurant a:visited {
   color: black;
@@ -220,6 +228,7 @@ h2 {
   }
   .restaurant__container {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
   }
@@ -231,6 +240,11 @@ h2 {
   }
 }
 @media screen and (min-width: 1000px) {
+  .fonctionnement__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
   .restaurant__card__new p {
     margin-left: 30%;
   }

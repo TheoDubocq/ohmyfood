@@ -49,15 +49,57 @@
     display: flex;
     background-color: white;
     flex-direction: column;
+    &__container{
+        display: flex;
+        flex-direction: column;
+    }
 
     &__etape {
-        @include etape
+       
+        display: flex;
+        align-items: center;
+
+        margin-left: 10px;
+        &__index{
+            position:absolute;
+            padding: 5px 10px 5px 10px;
+            margin-left: 10px;
+
+            border-radius: 20px;
+            background: $colour-primary;
+            color: white;
+            z-index: 2;
+        }
+        &__texte{
+            @media screen and (min-width:768px){
+                margin-right: 4rem;
+            }
+            font-weight: 600;
+            width: 100%;
+            margin: 20px;
+            padding:0px 35px 0px 35px;
+            display: flex;
+            align-items: center;
+            border-radius: 15px;
+            box-shadow: 0 3px 8px 0 rgba(0,0,0,0.3);
+            & p{
+                padding-left: 10px;
+            }
+            & .fa-solid {
+                color: grey;
+            }
+            }    
     }
 }
 
 .restaurant {
+
     background: $colour-grey;
     padding: 20px 0px 20px 0px;
+    &__container{
+        display: flex;
+        flex-direction: column;
+    }
     & a:visited{
         color: black;
     }
@@ -168,6 +210,7 @@
         background: $colour-grey;
         &__container{
         display: flex;
+        flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
         }
@@ -184,6 +227,14 @@
     }
 
     @media screen and (min-width:1000px){
+        .fonctionnement{
+            &__container{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+        
+        }
  
         .restaurant {
             &__card {
