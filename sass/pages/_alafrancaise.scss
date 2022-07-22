@@ -1,23 +1,16 @@
-.img__container{
-    @include imagecontainer;
 
-}
 .maincontainer{
     display: flex;
     justify-content: center
 }
 .img__container{
-@include image;
 top:0;
 position:fixed;
 z-index:-100;
-background:url("/assets/restaurants/francaise.jpg");
+/*background:url("/assets/restaurants/francaise.jpg");*/
 width: 100vw;
 height: 100%;
-background-attachment:fixed;
-background-position: center center;
-background-repeat:no-repeat;
-background-size: cover;
+
 }
 .white{
     color: white;
