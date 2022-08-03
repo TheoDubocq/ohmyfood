@@ -8,7 +8,7 @@ html, body {
   margin: 0;
 }
 
-.--isaligned {
+.-isaligned {
   padding: 0px 5% 0px 5%;
   text-align: center;
 }
@@ -29,7 +29,6 @@ body {
 
 .locations__ville {
   font-weight: 700;
-  font-style: bold;
 }
 
 h1 {
