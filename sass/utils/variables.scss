@@ -3,3 +3,5 @@ $colour-secondary: #FF79DA ;
 $colour-tertiary:#99E2D0;
 $colour-grey: #f6f6f6;
 $timing:0;
+$colour-one:lighten($colour-primary, 10%);
+$colour-two:lighten($colour-secondary, 10%);
