@@ -48,6 +48,10 @@ h2 {
   color: white;
 }
 
+.color-link {
+  color: black;
+}
+
 .spinner {
   position: fixed;
   z-index: -10;
